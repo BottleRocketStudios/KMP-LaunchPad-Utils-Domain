@@ -8,3 +8,7 @@ interface LoggingManager {
     fun e(tag: String? = null, message: String?, t: Throwable? = null)
     fun wtf(tag: String? = null, message: String?, t: Throwable? = null)
 }
+
+interface Loggable {
+    val log: LoggingManager
+}

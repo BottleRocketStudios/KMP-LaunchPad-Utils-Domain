@@ -27,7 +27,12 @@ kotlin {
     }
 
     sourceSets {
-        commonMain.dependencies {}
+        androidMain.dependencies {
+            implementation(libs.androidx.lifecycle.livedata)
+        }
+        commonMain.dependencies {
+            implementation(libs.kotlinx.coroutines.core)
+        }
         commonTest.dependencies {}
     }
 }
